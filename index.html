@@ -4,264 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayya Ser Brincante</title>
-    <style>
-  /* Definição da paleta de cores */
-:root {
-    --cor-primaria: hsl(55, 40%, 45%);
-    --cor-secundaria: hsl(10, 80%, 80%);
-    --cor-terciaria: hsl(100, 40%, 30%);
-    --cor-destaque: hsl(280, 30%, 40%);
-    --cor-escura: hsl(90, 50%, 20%);
-    
-    /* Cores do modo escuro */
-    --cor-fundo-dark: hsl(240, 10%, 15%);
-    --cor-texto-dark: hsl(0, 0%, 90%);
-}
-
-/* Modo escuro */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--cor-fundo-dark);
-        color: var(--cor-texto-dark);
-    }
-    .section {
-        background: hsl(240, 10%, 20%);
-        color: var(--cor-texto-dark);
-    }
-}
-
-/* Reset e estilização moderna */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:focus-visible {
-    outline: 2px dashed var(--cor-destaque);
-}
-
-/* Cabeçalho fixo e estilizado */
-header {
-    background-color: rgba(160, 152, 65, 0.8);
-    backdrop-filter: blur(8px);
-    color: #8E5F92;
-    text-align: center;
-    padding: 15px 40px;
-    font-size: 24px;
-    font-weight: bold;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-@supports not (backdrop-filter: blur(8px)) {
-    header {
-        background-color: var(--cor-primaria);
-    }
-}
-
-/* Navegação */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: white;
-    font-size: 18px;
-    position: relative;
-    transition: color 0.3s, transform 0.2s;
-}
-
-nav ul li a:hover {
-    color: var(--cor-destaque);
-    transform: scale(1.1);
-}
-
-nav ul li a::after {
-    content: "";
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-primaria));
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-/* Seções */
-.section {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    will-change: transform, box-shadow;
-    border: 3px solid var(--cor-terciaria);
-}
-
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.section h2 {
-    color: var(--cor-terciaria);
-    margin-bottom: 15px;
-    font-size: 26px;
-}
-
-.section p {
-    font-size: 16px;
-    color: var(--cor-escura);
-    line-height: 1.6;
-}
-
-/* Imagens estilizadas */
-.section img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: 15px;
-    border: 4px solid var(--cor-destaque);
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-primaria));
-    color: white;
-    width: 100%;
-    font-size: 16px;
-}
-
-footer a {
-    color: white;
-    font-weight: bold;
-} 
-
-footer a:hover {
-    color: var(--cor-secundaria);
-    text-decoration: underline;
-}
-
-/* Seleção de texto personalizada */
-::selection {
-    background: var(--cor-primaria);
-    color: white;
-}
-
-
-.social-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    transition: 0.3s;
-}
-
-.instagram {
-    background-color: #8E5F92;
-}
-
-.facebook {
-    background-color: #FFBCB0;
-}
-
-.whatsapp {
-    background-color: #4C722F;
-}
-
-.social-btn:hover {
-    opacity: 0.8;
-}
-
-
-    </style>
+    <mate name = "descripcion" content="Transformando brincadeiras em aprendizado e criatividade">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 
 <body>
 
     <header>
+
         <span>Ayya Ser Brincante</span>
+
+
         <nav>
             <ul>
-                
-                <li><a href="Transporteapé.html" target="_blank">Sobre </a></li>
-                <li><a href="index1.html" target="_blank">Serviços </a></li>
-                <li><a href="Transporteapé.html" target="_blank">Produtos </a></li>
-                <li><a href="Transporteapé.html" target="_blank">Contato</a></li>
+                <li><a href="Sobre.html" target="_blank">Sobre</a></li>
+                <li><a href="Serviços.html" target="_blank">Serviço</a></li>
+                <li><a href="Produtos.html" target="_blank">Produtos</a></li>
+                <li><a href="Contato.html" target="_blank">Contato</a></li>
              
-            </ul>
+            </ul> 
         </nav>
+
     </header>
 
-    <section id="inicio" class="section">
+<main>
 
-        <h2>Bem-vindo ao Ayya Ser Brincante</h2>
-        <p>Transformando brincadeiras em aprendizado e criatividade.</p>
-        <img src="fotocapasite.png" alt="Imagem representativa do projeto AYYA">   
-         </section>
+        <section id="inicio" class="section">
 
-    <section id="sobre" class="section">
-        <h2>Sobre o Projeto</h2>
+            <h2>Bem-vindo ao Ayya Ser Brincante</h2>
+            <p>Transformando brincadeiras em aprendizado e criatividade.</p>
+    
+    
+            <div>
+    
+                <img src="fotocapasite.png" alt="Imagem representativa do projeto AYYA">
+    
+            </div>
+               
+             </section>
+    
+        <section id="sobre" class="section">
+    
+            <span> Sobre o projeto </span>
+    
+            <p> 
+    
+                A empresa Ayya Ser Brincante promove experiências lúdicas para crianças, combinando criatividade, movimento e aprendizado.
+               Idealizada pelo fundador Gabriel Pires Delphino, Ayya Ser Brincante surgiu no ano de 2024 na cidade de Paraty, Rio de Janeiro, com instuito de oferecer Brincadeiras lúdicas, diversão e acolhimento para crianças da região tanto da rede pública como da rede privada.
+    
+               Em 06 de Janeiro de 2024, a empresa surge na região do bairro Caborê dentro do espaçao Casa Brincante administrado pela Mariah e o Gabriel, este projeto abriu as portas para que o fundador Gabriel criasse o projeto Brincar na férias que aconteceu no periodo das férias de Janeiro do ano de 2024. Ao longo do ano de 2024, a empresa foi criando corpo e assim surgiu outro projeto "Jardim Brincante" que surgiu no Instituto Brincarte que são administrados pela Monalisa Couto e o Zé Geraldo. Além disso, a empresa seguiu o ano de 2024 realizando animação de festas infantil na cidade de Paraty e na região metropolitana de São Paulo.
+    
+               Ao longo do ano de 2024, o projeto seguiu realizando parceiras com o festival "Articula Preta" realzando atividades lúdicas. 
+               
+               No ano de 2024, no mês da conciência negra, o projeto Ayya Ser Brincante também realizou parceria com o Kindzi realizando oficinas brincante no 25 encontro da conciência negra do Quilombo do Campinho com a tenda do Brincar espaço aberto para crianças do Quilombo do Campinho.
+    
+            </p>
+    
+        </section>
+    
+        <section id="sobre" class="section">
+    
+            <h2>Sobre o fundador</h2>
+    
+            <p> 
+                Aos 28 anos, Gabriel Pires Delphino criou o projeto Ayya ser Brincante com intuito de entregar o melhor que existe no que se refere a brincadeira Afro-brasileiras e indígenas. Depois de se formar como Tecnologo em Transporte Terrestre pela Ftac-Tatuapé depois atuar por 3 anos no seguimento de transporte de pessoas através da modalidade de fretamento decidiu empreender de várias formas, foi quando encontrou próposito neste projeto.
+                            
+            </p>
+    
+            <div>
+    
+                <img src="capaayya.jpg.jpg" alt="imagemsobrefestivalarticulapreta">
+    
+            </div>
+    
+        </section>
+    
+        <section>
+    
+            <button>
+    
+                Imagem
+    
+            </button>
+    
+        </section>
+    
+</main>
 
-        <p> 
-
-            A empresa Ayya Ser Brincante promove experiências lúdicas para crianças, combinando criatividade, movimento e aprendizado.
-           Idealizada pelo fundador Gabriel Pires Delphino, Ayya Ser Brincante surgiu no ano de 2024 na cidade de Paraty, Rio de Janeiro, com instuito de oferecer Brincadeiras lúdicas, diversão e acolhimento para crianças da região tanto da rede pública como da rede privada.
-
-           Em 06 de Janeiro de 2024, a empresa surge na região do bairro Caborê dentro do espaçao Casa Brincante administrado pela Mariah e o Gabriel, este projeto abriu as portas para que o fundador Gabriel criasse o projeto Brincar na férias que aconteceu no periodo das férias de Janeiro do ano de 2024. Ao longo do ano de 2024, a empresa foi criando corpo e assim surgiu outro projeto "Jardim Brincante" que surgiu no Instituto Brincarte que são administrados pela Monalisa Couto e o Zé Geraldo. Além disso, a empresa seguiu o ano de 2024 realizando animação de festas infantil na cidade de Paraty e na região metropolitana de São Paulo.
-
-           Ao longo do ano de 2024, o projeto seguiu realizando parceiras com o festival "Articula Preta" realzando atividades lúdicas. 
-           
-           No ano de 2024, no mês da conciência negra, o projeto Ayya Ser Brincante também realizou parceria com o Kindzi realizando oficinas brincante no 25 encontro da conciência negra do Quilombo do Campinho com a tenda do Brincar espaço aberto para crianças do Quilombo do Campinho.
-
-        </p>
-
-    </section>
-
-    <section id="sobre" class="section">
-        <h2>Sobre o fundador</h2>
-
-        <p> 
-            Aos 28 anos, Gabriel Pires Delphino criou o projeto Ayya ser Brincante com intuito de entregar o melhor que existe no que se refere a brincadeira Afro-brasileiras e indígenas. Depois de se formar como Tecnologo em Transporte Terrestre pela Ftac-Tatuapé depois atuar por 3 anos no seguimento de transporte de pessoas através da modalidade de fretamento decidiu empreender de várias formas, foi quando encontrou próposito neste projeto.
-            
-           <img src="capaayya.jpg.jpg" alt="imagemsobrefestivalarticulapreta">
-       
-        </p>
-
-    </section>
-
+    
     <footer>
     <p>Nos siga nas redes sociais:</p>
 
@@ -281,4 +112,5 @@ footer a:hover {
     </footer>
 
 </body>
+
 </html>
