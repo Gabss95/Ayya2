@@ -1,0 +1,297 @@
+  /* Definição da paleta de cores */
+  :root {
+    --cor-primaria: hsl(55, 40%, 45%);
+    --cor-secundaria: hsl(10, 80%, 80%);
+    --cor-terciaria: hsl(100, 40%, 30%);
+    --cor-destaque: hsl(280, 30%, 40%);
+    --cor-escura: hsl(90, 50%, 20%);
+    
+    /* Cores do modo escuro */
+    --cor-fundo-dark: hsl(240, 10%, 15%);
+    --cor-texto-dark: hsl(0, 0%, 90%);
+}
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--cor-fundo-dark);
+        color: var(--cor-texto-dark);
+    }
+    .section {
+        background: hsl(240, 10%, 20%);
+        color: var(--cor-texto-dark);
+    }
+}
+
+/* Reset e estilização moderna */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 2px dashed var(--cor-destaque);
+}
+
+/* Cabeçalho fixo e estilizado */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Altura do cabeçalho */
+    background-color: hsl(100, 40%, 30%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+main {
+    padding-top: 80px; /* Espaçamento para evitar sobreposição */
+}
+
+@supports not (backdrop-filter: blur(8px)) {
+    header {
+        background-color: var(--cor-primaria);
+    }
+}
+
+/* Navegação */
+nav ul {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    text-align: center;
+    color: var(--cor-destaque);
+    transform: scale(1.1);
+}
+
+nav ul li a::after {
+    text-align: center;
+    content: "";
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-primaria));
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+
+/* Seções */
+.section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    will-change: transform, box-shadow;
+    border: 3px solid var(--cor-terciaria);
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section h2 {
+    color: var(--cor-terciaria);
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.section p {
+    font-size: 16px;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Imagens estilizadas */
+.section img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 4px solid var(--cor-destaque);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-primaria));
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+footer {
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    position: relative; /* Mantém o rodapé no fluxo normal da página */
+    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-primaria)); /* Fundo com gradiente */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}   
+
+/* Seleção de texto personalizada */
+::selection {
+    background: var(--cor-primaria);
+    color: white;
+}
+
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+.instagram {
+    background-color: #8E5F92;
+}
+
+.facebook {
+    background-color: #FFBCB0;
+}
+
+.whatsapp {
+    background-color: #4C722F;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+
+/*27/04/2025 -  Estilização do cabeçalho e seção do autor */ 
+.header-container {
+    display: flex; /* Alinha os itens lado a lado */
+    align-items: center; /* Centraliza verticalmente os itens */
+    gap: 10px; /* Espaçamento entre o mascote e o texto */
+}
+
+.mascote img {
+    width:100px; /* Ajuste o tamanho do mascote */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Torna a imagem redonda */
+    border: 4px solid var(--cor-destaque); /* Adiciona uma borda */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner */
+}
+
+.header-text {
+    font-size: 24px; /* Ajuste o tamanho da fonte do texto */
+    font-weight: bold; /* Deixe o texto em negrito */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo da seção do autor */
+.sobre-autor {
+    padding: 40px 20px;
+    background-color: var(--cor-secundaria); /* Cor de fundo */
+}
+
+.autor-container {
+    display: flex; /* Alinha os itens lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    max-width: 1200px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+.autor-imagem img {
+    width: 300px; /* Ajusta o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Deixa a imagem circular */
+    border: 4px solid var(--cor-destaque); /* Adiciona uma borda */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+.autor-texto {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    color: var(--cor-escura); /* Cor do texto */
+}
+
+.autor-texto h2 {
+    font-size: 28px;
+    color: var(--cor-terciaria); /* Cor do título */
+    margin-bottom: 15px;
+}
+
+.autor-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Estilo para a lista de pacotes */
+.pacotes-lista {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pacotes-lista li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.pacotes-lista li:hover {
+    background-color: #f1f1f1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da janela */
+    margin: 0;
+}
+
+main {
+    flex: 3; /* Faz o conteúdo principal ocupar o espaço restante */
+}
